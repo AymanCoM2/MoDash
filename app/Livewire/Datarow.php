@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Mandoob;
 use Livewire\Component;
 
 class Datarow extends Component

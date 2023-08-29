@@ -2,7 +2,7 @@
     <div class="card shadow-lg">
         <div class="card-body">
             <div class="row">
-                <div class="col-sm-2"> {{ $mandoob->userCode }}</div>
+                <div class="col-sm-2">{{ $mandoob->userCode }}</div>
                 <div class="col-sm-2"> {{ $mandoob->accountType }}</div>
                 <div class="col-sm-2"> {{ $mandoob->user_areaCode }}</div>
                 <div class="col-sm-2"> {{ $mandoob->areacode }}</div>
