@@ -1,0 +1,15 @@
+In LiveWire there is Nothing Like Sending Data In Normal Blade !!
+
+
+Example :
+    1- In Normal Blade You Get the ID , and Then you Get Data From DB [Same In LiveWire]
+    2- In Normal Blade ,you retrieve Data and Compact IT !!
+        [NOT LiveWire] -> You retrieve Data and Match it "Or put it " in Model Fields
+        that Correspond to those DB-Model Fields ,,, And If you Want to Show anything
+        Anywhere , you Just Need to Make "Wire:Model"
+
+====================================
+In other Words [ In The class , You Make A Function To "WIRE" Data With HTML ]
+    HOW
+        - In Class -> Fill Properties with Data ;
+        = In VIEW "of LiveWire" You Wire:Model those Properties ;

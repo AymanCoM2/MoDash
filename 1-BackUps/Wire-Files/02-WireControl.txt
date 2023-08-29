@@ -1,0 +1,6 @@
+1- Inside the Class :
+    - Properties => Attached to Wire:model
+
+    - Functions "Methods" :
+        - Event_Reaction_functions [ Like ` wire.submit.prevent ` ]
+        - 
