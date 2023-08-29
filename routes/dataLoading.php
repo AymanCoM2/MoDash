@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
-
 //------------------------------------------
 Route::get('/load-data', function () {
     return view('pages.load-data');

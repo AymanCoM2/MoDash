@@ -11,6 +11,5 @@
         This Command will have Two parts :
         [ Class -> Has Data and Logic ]
         [ View -> A reactive html Component which you Can Embed in any Place  ]
-
         This Means For Example you Can Make Comments Section a [ LiveWire Component ] And Rest of Page is Normal Blade But this Means when Embeding this LiveWire-Compoent inside this Balde it will be "Reactive Component"
     }
