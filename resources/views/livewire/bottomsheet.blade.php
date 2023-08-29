@@ -9,36 +9,35 @@
             <form>
                 <div class="row m-auto">
                     <div class="mb-3 col-sm-2">
-                        <label for="ff" class="form-label">Email address</label>
+                        <label for="ff" class="form-label">User Code:</label>
                         <input type="text" class="form-control" id="ff" aria-describedby=""
                             wire:model="userCode">
                     </div>
                     <div class="mb-3 col-sm-2">
-                        <label for="" class="form-label">Password</label>
+                        <label for="" class="form-label">Account Type:</label>
                         <input type="text" class="form-control" wire:model="accountType">
                     </div>
 
                     <div class="mb-3 col-sm-2">
-                        <label for="" class="form-label">text</label>
+                        <label for="" class="form-label">User Area Code:</label>
                         <input type="text" class="form-control" wire:model="user_areaCode">
                     </div>
 
                     <div class="mb-3 col-sm-2">
-                        <label for="" class="form-label">text</label>
+                        <label for="" class="form-label">Area Code:</label>
                         <input type="text" class="form-control" wire:model="areacode">
                     </div>
 
                     <div class="mb-3 col-sm-2">
-                        <label for="" class="form-label">text</label>
+                        <label for="" class="form-label">Auth Level:</label>
                         <input type="text" class="form-control" wire:model="user_auth_level">
                     </div>
 
                     <div class="mb-3 col-sm-2">
                         <label for="" class="form-label"></label>
-                        <button type="submit" class="btn btn-primary form-control">Submit</button>
+                        <button type="submit" class="btn btn-primary form-control" wire:click="updateMandoobData()">Update</button>
                     </div>
                 </div>
-
 
             </form>
         </div>
