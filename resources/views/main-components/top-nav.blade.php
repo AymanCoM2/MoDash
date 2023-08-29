@@ -15,8 +15,8 @@
                     <a class="nav-link active" aria-current="page" href="{{ route('load-data') }}">Load Data</a>
                 </li>
             </ul>
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item dropdown ">
+            <ul class="navbar-nav ">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Actions
@@ -25,12 +25,6 @@
                         <li><a class="dropdown-item" href="{{ route('login') }}">Loign</a></li>
                         <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-light nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-                        aria-controls="offcanvasExample">
-                        Manage
-                    </a>
                 </li>
             </ul>
         </div>
