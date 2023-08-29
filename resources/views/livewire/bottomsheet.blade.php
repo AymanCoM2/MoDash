@@ -1,4 +1,5 @@
-<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+<div wire:ignore.self class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasExampleLabel">Edit WIRE :</h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>

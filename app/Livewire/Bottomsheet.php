@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Mandoob;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
@@ -26,10 +27,11 @@ class Bottomsheet extends Component
     public function fillTheSheet($id)
     // $id == id: sent in thr Dispach 
     {
-        $this->userCode  = $id;
-        $this->accountType  = 'cc';
-        $this->user_areaCode  = 'c c c';
-        $this->areacode  = 'c c';
-        $this->user_auth_level  = 'c c';
+        $fillingMandoon  = Mandoob::find($id);
+        $this->userCode  = $fillingMandoon->userCode;
+        $this->accountType  = $fillingMandoon->accountType;
+        $this->user_areaCode   = $fillingMandoon->user_areaCode;
+        $this->areacode  = $fillingMandoon->areacode;
+        $this->user_auth_level  = $fillingMandoon->user_auth_level;
     }
 }
