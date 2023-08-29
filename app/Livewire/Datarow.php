@@ -25,6 +25,6 @@ class Datarow extends Component
     {
         // $mandoobId
         // ,id: $mandoobId
-        $this->dispatch('mandoob-selected',id: $mandoobId);
+        $this->dispatch('mandoob-selected', id: $mandoobId);
     }
 }
