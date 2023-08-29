@@ -1,0 +1,4 @@
+SELECT * FROM TM.areahierarchy; 
+user: dash 
+pass: dash@1234
+host : db.is-by.us
