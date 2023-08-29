@@ -6,12 +6,11 @@
     </div>
     <div class="offcanvas-body m-auto">
         <div>
-            <form>
+            <form wire:submit.prevent id="sheetForm">
                 <div class="row m-auto">
                     <div class="mb-3 col-sm-2">
                         <label for="ff" class="form-label">User Code:</label>
-                        <input type="text" class="form-control" id="ff" aria-describedby=""
-                            wire:model="userCode">
+                        <input type="text" class="form-control" id="ff" wire:model="userCode">
                     </div>
                     <div class="mb-3 col-sm-2">
                         <label for="" class="form-label">Account Type:</label>
@@ -35,7 +34,8 @@
 
                     <div class="mb-3 col-sm-2">
                         <label for="" class="form-label"></label>
-                        <button type="submit" class="btn btn-primary form-control" wire:click="updateMandoobData()">Update</button>
+                        <button type="submit" class="btn btn-primary form-control"
+                            wire:click="updateMandoobData()" >Update</button>
                     </div>
                 </div>
 

@@ -44,6 +44,7 @@ class Bottomsheet extends Component
         $this->user_areaCode = '';
         $this->areacode = '';
         $this->user_auth_level = '';
+
         $this->currentMandoobId = '';
     }
 
@@ -57,11 +58,18 @@ class Bottomsheet extends Component
         $updatedMandoob->areacode = $this->areacode;
         $updatedMandoob->user_auth_level = $this->user_auth_level;
         $updatedMandoob->save();
-
+        $this->dispatch('mandoob-updated', id: $updatedMandoob->id);
         // ! Now Clear the Model Data 
         $this->clearModelData();
+
+
         // * Now Show Toastr If you Can 
-        Toastr::success('Updated', 'Done', ["positionClass" => "toast-top-right"]);
-        return redirect()->route('home');
+        // Toastr::success('Updated', 'Done', ["positionClass" => "toast-top-right"]);
+        // return redirect()->route('home');
+
+
+
+        // Dispach another Event 
+
     }
 }

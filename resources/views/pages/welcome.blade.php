@@ -27,3 +27,12 @@
         @endforeach
     </div>
 @endsection
+@section('extra-js')
+    <script>
+        window.addEventListener('mandoob-updated', event => {
+            let closeCanvas = document.querySelector('[data-bs-dismiss="offcanvas"]');
+            closeCanvas.click();
+            // alert('Name updated to');
+        })
+    </script>
+@endsection
