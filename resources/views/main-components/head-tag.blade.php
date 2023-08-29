@@ -11,5 +11,6 @@
     <link rel="stylesheet" href="{{ asset('css/simplex-bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/offCanvas-Custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/toastify.min.css') }}">
     <!-- Scripts -->
 </head>

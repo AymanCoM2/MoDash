@@ -62,13 +62,9 @@ class Bottomsheet extends Component
         // ! Now Clear the Model Data 
         $this->clearModelData();
 
-
         // * Now Show Toastr If you Can 
-        // Toastr::success('Updated', 'Done', ["positionClass" => "toast-top-right"]);
+        toastr()->success('Updated', 'Done');
         // return redirect()->route('home');
-
-
-
         // Dispach another Event 
 
     }
