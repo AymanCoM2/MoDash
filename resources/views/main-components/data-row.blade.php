@@ -8,7 +8,7 @@
                 <div class="col-sm-2">{{ $mandoob->areacode }}</div>
                 <div class="col-sm-2">{{ $mandoob->user_auth_level }}</div>
                 <div class="col-sm-2"><a class="btn btn-warning " data-bs-toggle="offcanvas" href="#offcanvasExample"
-                        role="button" aria-controls="offcanvasExample">
+                        role="button" aria-controls="offcanvasExample" >
                         Manage
                     </a></div>
             </div>

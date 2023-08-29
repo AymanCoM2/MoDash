@@ -5,7 +5,8 @@
 
 <body>
     @include('main-components.top-nav')
-    @include('main-components.offCanvas-menu')
+    {{-- @include('main-components.offCanvas-menu') --}}
+    <livewire:Bottomsheet>
     {{-- TODO >> Put Live Wire Component Here  --}}
     <div class="py-4">
         @yield('content')

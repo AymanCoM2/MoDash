@@ -1,6 +1,5 @@
 In LiveWire there is Nothing Like Sending Data In Normal Blade !!
 
-
 Example :
     1- In Normal Blade You Get the ID , and Then you Get Data From DB [Same In LiveWire]
     2- In Normal Blade ,you retrieve Data and Compact IT !!
