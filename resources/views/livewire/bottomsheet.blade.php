@@ -8,13 +8,23 @@
         <div>
             <form wire:submit.prevent id="sheetForm">
                 <div class="row m-auto">
+
+
+
                     <div class="mb-3 col-sm-2">
                         <label for="ff" class="form-label">User Code:</label>
                         <input type="text" class="form-control" id="ff" wire:model="userCode">
                     </div>
                     <div class="mb-3 col-sm-2">
                         <label for="" class="form-label">Account Type:</label>
-                        <input type="text" class="form-control" wire:model="accountType">
+                        <select class="form-select" aria-label="Default select example" wire:model="accountType">
+                            <option value=""></option>
+                            {{-- // TODO --}}
+                            {{-- Note : Those empty options important for nulls --}}
+                            <option value="Admin">Admin</option>
+                            <option value="Manger">Manger</option>
+                            <option value="Sales">Sales</option>
+                        </select>
                     </div>
 
                     <div class="mb-3 col-sm-2">
@@ -24,18 +34,32 @@
 
                     <div class="mb-3 col-sm-2">
                         <label for="" class="form-label">Area Code:</label>
-                        <input type="text" class="form-control" wire:model="areacode">
+                        <select class="form-select" aria-label="Default select example" wire:model="areacode">
+                            <option value=""></option>
+                            <option value="south">south</option>
+                            <option value="ryad">ryad</option>
+                            <option value="Qasim">Qasim</option>
+                            <option value="kosim">kosim</option>
+                            <option value="west">west</option>
+                        </select>
                     </div>
 
                     <div class="mb-3 col-sm-2">
                         <label for="" class="form-label">Auth Level:</label>
-                        <input type="text" class="form-control" wire:model="user_auth_level">
+                        <select class="form-select" aria-label="Default select example" wire:model="user_auth_level">
+                            <option value=""></option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
                     </div>
 
                     <div class="mb-3 col-sm-2">
                         <label for="" class="form-label"></label>
                         <button type="submit" class="btn btn-primary form-control"
-                            wire:click="updateMandoobData()" >Update</button>
+                            wire:click="updateMandoobData()">Update</button>
                     </div>
                 </div>
 

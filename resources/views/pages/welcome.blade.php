@@ -23,7 +23,8 @@
 
         @foreach ($allMandoobs as $mandoob)
             {{-- @include('main-components.data-row', ['mandoob' => $mandoob]) --}}
-            <livewire:Datarow :mandoob="$mandoob">
+            {{-- <livewire:Datarow :mandoob="$mandoob"> --}}
+            @livewire('Datarow', ['mandoob' => $mandoob], key($mandoob->id))
         @endforeach
     </div>
 @endsection
