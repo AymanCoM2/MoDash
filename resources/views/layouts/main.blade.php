@@ -6,7 +6,9 @@
 <body>
     @include('main-components.top-nav')
     @include('main-components.offCanvas-menu')
-    @yield('content')
+    <div class="py-4">
+        @yield('content')
+    </div>
     @include('main-components.bottom-js')
 </body>
 
