@@ -8,13 +8,9 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Route::group([], __DIR__ . '/dataLoading.php');
+Route::group([], __DIR__ . '/homing.php');
 
-
-
-Route::get('/', function () {
-    return redirect()->route('home');
-});
-Route::get('/home', function () {
-    $allMandoobs  = Mandoob::all(); // TODO pagination 
-    return view('pages.welcome', compact('allMandoobs'));
-})->name('home');
+// ========================
+Route::get('/aggregating', function () {
+    // 
+})->name('aggregate');
