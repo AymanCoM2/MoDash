@@ -12,5 +12,6 @@
     <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/offCanvas-Custom.css') }}">
     <link rel="stylesheet" href="{{ asset('css/toastify.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/treeView.css') }}">
     <!-- Scripts -->
 </head>

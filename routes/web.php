@@ -11,6 +11,10 @@ Route::group([], __DIR__ . '/dataLoading.php');
 Route::group([], __DIR__ . '/homing.php');
 
 // ========================
-Route::get('/aggregating', function () {
-    // 
-})->name('aggregate');
+Route::get('/tree', function () {
+    // $allMandoobs  = Mandoob::all() ; 
+    $areas = DB::table('mandoobs')
+        ->groupBy('areacode')
+        ->pluck('areacode');
+    return view('pages.tree-view', compact('areas'));
+})->name('tree');
