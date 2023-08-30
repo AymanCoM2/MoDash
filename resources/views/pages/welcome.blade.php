@@ -1,9 +1,12 @@
 @extends('layouts.main')
 @section('content')
     <div class="container">
-        <div class="row w-50 m-auto mb-3">
-            <input type="text" class="rounded rounded-pill p-2 border border-primary px-4">
-        </div>
+        <form action="" method="get">
+            <div class="row w-50 m-auto mb-3">
+                <input type="text" class="rounded rounded-pill p-2 border border-primary px-4" name="search"
+                    value="{{ request()->query('search') }}">
+            </div>
+        </form>
     </div>
     <div class="container">
         <div class=" mb-2">

@@ -30,11 +30,7 @@
                                                     <div class="col-sm-2">{{ $admin->user_areaCode }}</div>
                                                     <div class="col-sm-2">{{ $admin->areacode }}</div>
                                                     <div class="col-sm-2">{{ $admin->user_auth_level }}</div>
-                                                    <div class="col-sm-2"><a class="btn btn-warning "
-                                                            data-bs-toggle="offcanvas" href="#offcanvasExample"
-                                                            role="button" aria-controls="offcanvasExample">
-                                                            Manage
-                                                        </a></div>
+                                                    <div class="col-sm-2"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -56,11 +52,6 @@
                                                     <div class="col-sm-2">{{ $manager->areacode }}</div>
                                                     <div class="col-sm-2">{{ $manager->user_auth_level }}</div>
                                                     <div class="col-sm-2">
-                                                        <a class="btn btn-warning " data-bs-toggle="offcanvas"
-                                                            href="#offcanvasExample" role="button"
-                                                            aria-controls="offcanvasExample">
-                                                            Manage
-                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -82,11 +73,7 @@
                                                     <div class="col-sm-2">{{ $sale->user_areaCode }}</div>
                                                     <div class="col-sm-2">{{ $sale->areacode }}</div>
                                                     <div class="col-sm-2">{{ $sale->user_auth_level }}</div>
-                                                    <div class="col-sm-2"><a class="btn btn-warning "
-                                                            data-bs-toggle="offcanvas" href="#offcanvasExample"
-                                                            role="button" aria-controls="offcanvasExample">
-                                                            Manage
-                                                        </a></div>
+                                                    <div class="col-sm-2"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -114,3 +101,10 @@
         }
     </script>
 @endsection
+
+
+
+{{-- <a class="btn btn-warning " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+    aria-controls="offcanvasExample">
+    Manage
+</a> --}}
