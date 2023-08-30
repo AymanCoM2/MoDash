@@ -16,10 +16,10 @@ Route::get('/home', function () {
         return $query->where('areacode', 'like', '%' . $search . '%')
             ->orWhere('accountType', 'like', '%' . $search . '%')
             ->orWhere('user_areaCode', 'like', '%' . $search . '%');
-    })->paginate(10);
+    });
 
     if (!$search) {
-        $allMandoobs = Mandoob::paginate(10);
+        $allMandoobs = Mandoob::all();
     }
 
     return view('pages.welcome', compact('allMandoobs'));

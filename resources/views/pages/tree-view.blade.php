@@ -65,7 +65,7 @@
                             <ul class="nested">
                                 @foreach ($sales as $sale)
                                     <li>
-                                        <div class="card">
+                                        <div class="card shadow  rounded rounded-pill p-1 m-1">
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="col-sm-2">{{ $sale->userCode }}</div>
