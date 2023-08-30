@@ -17,7 +17,8 @@
                             ->where('accountType', 'Sales')
                             ->get();
                     @endphp
-                    <ul class="nested">
+                    {{-- I added 'active' Below So that is Open When i visit it  --}}
+                    <ul class="nested active">
                         <li><span class="caret">Admins ( {{ $admins->count() }} )</span>
                             <ul class="nested">
                                 @foreach ($admins as $admin)
