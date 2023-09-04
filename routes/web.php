@@ -12,9 +12,16 @@ Route::group([], __DIR__ . '/homing.php');
 
 // ========================
 Route::get('/tree', function () {
-    // $allMandoobs  = Mandoob::all() ; 
     $areas = DB::table('mandoobs')
         ->groupBy('areacode')
         ->pluck('areacode');
     return view('pages.tree-view', compact('areas'));
 })->name('tree');
+
+
+Route::get('/tree-two', function () {
+    $areas = DB::table('mandoobs')
+        ->groupBy('areacode')
+        ->pluck('areacode');
+    return view('pages.two-tree', compact('areas'));
+})->name('tree-two');

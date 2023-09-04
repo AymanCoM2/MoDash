@@ -13,6 +13,10 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('tree') }}">Tree</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('tree-two') }}">Second Tree</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('load-data') }}">Load Data</a>
                 </li>
