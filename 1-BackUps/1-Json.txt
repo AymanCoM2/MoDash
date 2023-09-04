@@ -1,0 +1,5 @@
+$all  = json_encode(Mandoob::all()) 
+    - Using Tinker 
+
+file_put_contents('json.json',$all);
+    To Export Data 
