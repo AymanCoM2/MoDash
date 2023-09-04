@@ -8,9 +8,6 @@
         <div>
             <form wire:submit.prevent id="sheetForm">
                 <div class="row m-auto">
-
-
-
                     <div class="mb-3 col-sm-2">
                         <label for="ff" class="form-label">User Code:</label>
                         <input type="text" class="form-control" id="ff" wire:model="userCode">
@@ -64,6 +61,15 @@
                 </div>
 
             </form>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                User Name :{{ $userName }}
+            </div>
+            <div class="col">
+                Email :{{ $userEmail }}
+            </div>
         </div>
     </div>
 </div>

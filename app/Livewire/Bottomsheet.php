@@ -4,17 +4,22 @@ namespace App\Livewire;
 
 use Brian2694\Toastr\Facades\Toastr;
 use App\Models\Mandoob;
+use Illuminate\Support\Facades\Http;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
 class Bottomsheet extends Component
 {
+    public $baseUrl  = 'http://localhost:5050/oneHuman/';
     public $currentMandoobId  = '';
     public $userCode  = '';
     public $accountType  = '';
     public $user_areaCode  = '';
     public $areacode  = '';
     public $user_auth_level  = '';
+
+    public $userName;
+    public $userEmail;
     public function render()
     {
         return view('livewire.bottomsheet');
@@ -27,14 +32,16 @@ class Bottomsheet extends Component
     #[On('mandoob-selected')]
     public function fillTheSheet($id)
     {
-        // $id == id: sent in thr Dispach 
+        // $id == id: sent in thr Dispatch 
         $this->currentMandoobId = $id;
-        $fillingMandoon  = Mandoob::find($id);
-        $this->userCode  = $fillingMandoon->userCode;
-        $this->accountType  = $fillingMandoon->accountType;
-        $this->user_areaCode   = $fillingMandoon->user_areaCode;
-        $this->areacode  = $fillingMandoon->areacode;
-        $this->user_auth_level  = $fillingMandoon->user_auth_level;
+        $fillingMandoob  = Mandoob::find($id);
+        $this->userCode  = $fillingMandoob->userCode;
+        $this->accountType  = $fillingMandoob->accountType;
+        $this->user_areaCode   = $fillingMandoob->user_areaCode;
+        $this->areacode  = $fillingMandoob->areacode;
+        $this->user_auth_level  = $fillingMandoob->user_auth_level;
+
+        $this->getFirebaseData();
     }
 
     public function clearModelData()
@@ -61,11 +68,22 @@ class Bottomsheet extends Component
         $this->dispatch('mandoob-updated', id: $updatedMandoob->id);
         // ! Now Clear the Model Data 
         $this->clearModelData();
-
         // * Now Show Toastr If you Can 
         toastr()->success('Updated', 'Done');
         // return redirect()->route('home');
         // Dispach another Event 
 
+    }
+
+    public function getFirebaseData()
+    {
+        $completeUrl = $this->baseUrl . $this->userCode;
+        $response = Http::get($completeUrl);
+        $responseBody = $response->body();
+        $responseArray = json_decode($responseBody);
+        // dd($responseArray[0]->Area);
+        // dd($responseArray[0]->Username) ; 
+        $this->userName  = $responseArray[0]->Username;
+        $this->userEmail  = $responseArray[0]->Email;
     }
 }
