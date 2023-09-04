@@ -17,7 +17,7 @@ ul, #myUL {
   
   /* Create the caret/arrow with a unicode, and style it */
   .caret::before {
-    content: "\2192";
+    content: "\2193";
     color: black;
     display: inline-block;
     margin-right: 6px;
@@ -25,7 +25,7 @@ ul, #myUL {
   
   /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
   .caret-down::before {
-    transform: rotate(90deg);
+    transform: rotate(270deg);
   }
   
   /* Hide the nested list */
