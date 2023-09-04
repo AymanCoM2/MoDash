@@ -40,10 +40,26 @@
                                 <hr>
                                 <div class="row">
                                     @foreach ($admins as $admin)
-                                        <div class="col-6 mx-auto">
-                                            <div class="card">
-                                                <div class="card-body border border-1">
-                                                    Admin Name : {{ $admin->userCode }}
+                                        <div class="col-4 mx-auto">
+                                            <div class="card shadow border border-1 rounded  bg-dark bg-gradient text-white">
+                                                @php
+                                                    $baseUrl = 'http://localhost:5050/oneHuman/';
+                                                    $completeUrl = $baseUrl . $admin->userCode;
+                                                    $response = Http::get($completeUrl);
+                                                    $responseBody = $response->body();
+                                                    $responseArray = json_decode($responseBody);
+                                                @endphp
+                                                <div class="card-body ">
+                                                    Admin Code : {{ $admin->userCode }}
+                                                    <hr class="hr" />
+                                                    Admin Name : {{ $responseArray[0]->Username }}
+                                                    <hr class="hr" />
+                                                    Admin Area Code :{{ $admin->user_areaCode }}
+                                                </div>
+                                            </div>
+                                            <div class="container text-center">
+                                                <div class="mx-auto">
+                                                    <div class="vr mx-auto" style="width:2px ;height:20px"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -56,10 +72,27 @@
                                 <hr>
                                 <div class="row">
                                     @foreach ($managers as $manager)
-                                        <div class="col-4 mx-auto">
-                                            <div class="card">
-                                                <div class="card-body border border-1">
-                                                    Manager Name : {{ $manager->userCode }}
+                                        <div class="col-3 mx-auto">
+                                            <div class="card shadow border border-1 rounded  bg-warning bg-gradient text-white">
+                                                @php
+                                                    $baseUrl = 'http://localhost:5050/oneHuman/';
+                                                    $completeUrl = $baseUrl . $manager->userCode;
+                                                    $response = Http::get($completeUrl);
+                                                    $responseBody = $response->body();
+                                                    $responseArray = json_decode($responseBody);
+                                                @endphp
+                                                <div class="card-body ">
+                                                    Manager Code : {{ $manager->userCode }}
+                                                    <hr class="hr" />
+                                                    Manager Name : {{ $responseArray[0]->Username }}
+                                                    <hr class="hr" />
+                                                    Manager Area Code :{{ $manager->user_areaCode }}
+                                                </div>
+
+                                            </div>
+                                            <div class="container text-center">
+                                                <div class="mx-auto">
+                                                    <div class="vr mx-auto" style="width:2px ;height:20px"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -72,10 +105,26 @@
                                 <hr>
                                 <div class="row">
                                     @foreach ($sales as $sale)
-                                        <div class="col-3 mx-auto">
-                                            <div class="card">
-                                                <div class="card-body border border-1">
-                                                    Sale Name : {{ $sale->userCode }}
+                                        <div class="col-2 mx-auto">
+                                            <div class="card shadow border border-1 rounded  bg-primary bg-gradient text-white">
+                                                @php
+                                                    $baseUrl = 'http://localhost:5050/oneHuman/';
+                                                    $completeUrl = $baseUrl . $sale->userCode;
+                                                    $response = Http::get($completeUrl);
+                                                    $responseBody = $response->body();
+                                                    $responseArray = json_decode($responseBody);
+                                                @endphp
+                                                <div class="card-body ">
+                                                    Sale Code : {{ $sale->userCode }}
+                                                    <hr class="hr" />
+                                                    Sale Name : {{ $responseArray[0]->Username }}
+                                                    <hr class="hr" />
+                                                    Sale Area Code :{{ $sale->user_areaCode }}
+                                                </div>
+                                            </div>
+                                            <div class="container text-center">
+                                                <div class="mx-auto">
+                                                    <div class="vr mx-auto" style="width:2px ;height:20px"></div>
                                                 </div>
                                             </div>
                                         </div>
