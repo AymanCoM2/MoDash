@@ -10,7 +10,7 @@
                 <div class="col-sm-2"><a class="btn btn-warning " data-bs-toggle="offcanvas" href="#offcanvasExample"
                         role="button" aria-controls="offcanvasExample"
                         wire:click="sendFromRowtoSheet({{ $mandoob->id }})">
-                        Manage
+                        <i class="fa fa-pencil"></i>Edit
                     </a></div>
             </div>
         </div>
